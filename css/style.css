@@ -231,3 +231,10 @@ footer {
     height: 120px;
   }
 }
+body {
+  margin: 0;
+  padding: 0;
+  background: #fce4ec; 
+  background-color: #fde7f0;
+}
+
