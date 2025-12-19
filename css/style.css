@@ -22,7 +22,6 @@ body {
   --card-bg: #ffe6f2;   
 }
 
-body {
   font-family: 'Emilys Candy', sans-serif;
   background: var(--bg);
   color: var(--text);
@@ -30,12 +29,21 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-.nav {
+
+    body {
+      margin: 0;
+      font-family: 'Emilys Candy', serif;
+      background: #ffe4f0;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 50px;
-      background: #fff0f6;
+      background: #fff3f8;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
@@ -53,12 +61,6 @@ body {
       margin: 0;
       padding: 0;
     }
-   
-    .nav ul li a.active {
-  color: #ff1493;
-  font-weight: bold;
-}
-
     .nav ul li a {
       text-decoration: none;
       color: #ff6fb5;
@@ -79,6 +81,45 @@ body {
       transform: scale(1.2);
     }
 
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Base navbar link style */
+.nav ul li a {
+  text-decoration: none;
+  color: #ff6fb5;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+.nav ul li a:hover,
+.nav ul li a.active {
+  color: #ff3a8e; 
+  animation: heartbeat 1s infinite;
+  text-shadow: 0 0 5px #ff6fb5, 0 0 15px #ffb6d9, 0 0 25px #ffb6d9;
+  cursor: pointer;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.07);
+  }
+}
 
 .logo {
   font-size: 26px;
@@ -144,17 +185,7 @@ footer {
   
 }
 
-@media (max-width: 768px) {
 
-  .nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-  .about-container {
-    padding: 30px 15px;
-  
-}
 .projects {
       max-width: 1000px;
       margin: 2rem auto;
@@ -239,5 +270,5 @@ body {
 }
 
 body {
-  background-color: #fde7f0; /* slightly lighter pink */
+  background-color: #fde7f0; 
 }

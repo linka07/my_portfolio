@@ -134,6 +134,69 @@
       font-size: 0.95em;
       line-height: 1.4;
     }
+    .achievement-card {
+  background: #fff3f8;
+  padding: 20px;
+  border-radius: 25px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  background-color: #ffb6d9; 
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4); 
+}
+
+.achievement-card img {
+  width: 80px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+  color: #ff6fb5;
+  margin-bottom: 10px;
+}
+
+.achievement-card p {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #ff6fb5;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+  color: #ff3a8e; 
+  animation: heartbeat 1s infinite;
+  text-shadow: 0 0 5px #ff6fb5, 0 0 15px #ffb6d9, 0 0 25px #ffb6d9;
+  cursor: pointer;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.07);
+  }
+}
+
 
     main.about p {
       max-width: 800px;
